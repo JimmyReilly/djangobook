@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Inherited nested template{% endblock %}
+
+{% block content %}
+
+	<h1>{% block headline %}{% endblock %}</h1>
+
+	<p>
+		{% block body_content %}{% endblock %}
+	</p>
+
+{% endblock %}
+
+{% block footer %}<p>Yay a footer!</p>{% endblock %}
