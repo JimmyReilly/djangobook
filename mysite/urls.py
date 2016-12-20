@@ -14,7 +14,8 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from mysite.views import hello, inherit_test, current_datetime, hours_ahead, current_datetime2, hours_ahead2
+from mysite.views import contact, display_meta, hello, hours_ahead, current_datetime, hours_ahead2, current_datetime2, inherit_test 
+from books import views
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -24,5 +25,8 @@ urlpatterns = [
     url(r'^time/$', current_datetime),
     url(r'^time2/$', current_datetime2),
     url(r'^inherit/$', inherit_test),
+    url(r'^display_meta/$', display_meta),
+    url(r'^search/$', views.search),
+    url(r'^contact/$', contact),
     url(r'^$', hello),
 ]
